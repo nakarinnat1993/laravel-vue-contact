@@ -1915,6 +1915,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App"
 });
@@ -37544,14 +37573,172 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "app" },
-    [_c("h1", [_vm._v("Hello")]), _vm._v(" "), _c("router-view")],
-    1
-  )
+  return _c("div", { staticClass: "app" }, [
+    _c("div", { staticClass: "flex" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "pl-4 pt-2 bg-gray-200 w-48 h-screen border-r-2 border-gray-400"
+        },
+        [
+          _c(
+            "nav",
+            [
+              _c("router-link", { attrs: { to: "/" } }, [
+                _c("h1", { staticClass: "text-3xl font-bold" }, [
+                  _vm._v("Contacts")
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "pt-10 text-gray-500 text-xs uppercase font-bold"
+                },
+                [_vm._v("Create")]
+              ),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                {
+                  staticClass:
+                    "flex items-center p-2 text-sm hover:text-blue-400",
+                  attrs: { to: "/x" }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-plus",
+                    attrs: { "aria-hidden": "true" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "tracking-wide pl-3 font-bold" }, [
+                    _vm._v("Add New")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "pt-10 text-gray-500 text-xs uppercase font-bold"
+                },
+                [_vm._v("General")]
+              ),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                {
+                  staticClass:
+                    "flex items-center p-2 text-sm hover:text-blue-400",
+                  attrs: { to: "/x" }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-list-alt",
+                    attrs: { "aria-hidden": "true" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "tracking-wide pl-3 font-bold" }, [
+                    _vm._v("Contacts")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                {
+                  staticClass:
+                    "flex items-center p-2 text-sm hover:text-blue-400",
+                  attrs: { to: "/x" }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-birthday-cake",
+                    attrs: { "aria-hidden": "true" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "tracking-wide pl-3 font-bold" }, [
+                    _vm._v("Birthdays")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass: "pt-10 text-gray-500 text-xs uppercase font-bold"
+                },
+                [_vm._v("Settings")]
+              ),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                {
+                  staticClass:
+                    "flex items-center p-2 text-sm hover:text-blue-400",
+                  attrs: { to: "/x" }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-unlock",
+                    attrs: { "aria-hidden": "true" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "tracking-wide pl-3 font-bold" }, [
+                    _vm._v("Logout")
+                  ])
+                ]
+              )
+            ],
+            1
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "flex flex-col flex-1 h-screen overflow-y-hidden" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "flex flex-col overflow-y-hidden flex-1" },
+            [_c("router-view", { staticClass: "p-6 overflow-x-hidden" })],
+            1
+          )
+        ]
+      )
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "h-16 px-5 border-b border-gray-400 flex items-center justify-between"
+      },
+      [
+        _c("div", [_vm._v("\n                    Contact\n                ")]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "rounded-full text-white bg-blue-400 w-10 h-10 flex justify-center items-center border border-gray-400"
+          },
+          [_vm._v("\n                    NK\n                ")]
+        )
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -37580,7 +37767,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
+    return _c("div", {}, [
       _c("div", { staticClass: "row justify-content-center" }, [
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "card" }, [
