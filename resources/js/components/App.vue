@@ -6,7 +6,7 @@
                     <router-link to="/"><h1 class="text-3xl font-bold">Contacts</h1></router-link>
 
                     <p class="pt-10 text-gray-500 text-xs uppercase font-bold">Create</p>
-                    <router-link to="/x" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-plus" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Add New</p> </router-link>
+                    <router-link to="/contacts/create" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-plus" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Add New</p> </router-link>
 
                     <p class="pt-10 text-gray-500 text-xs uppercase font-bold">General</p>
                     <router-link to="/x" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-list-alt" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Contacts</p> </router-link>
@@ -20,7 +20,7 @@
             <div class="flex flex-col flex-1 h-screen overflow-y-hidden">
                 <div class="h-16 px-5 border-b border-gray-400 flex items-center justify-between">
                     <div>
-                        Contact
+                        Contacts
                     </div>
                     <div class="rounded-full text-white bg-blue-400 w-10 h-10 flex justify-center items-center border border-gray-400">
                         NK
