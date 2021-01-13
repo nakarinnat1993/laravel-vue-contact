@@ -36,7 +36,7 @@ export default {
     },
     computed:{
         hasError(){
-            return this.errors && this.errors[this.name] && this.errors[this.name].length >0;
+            return this.errors && this.errors[this.name] && this.errors[this.name].length > 0;
         }
     },
     methods: {

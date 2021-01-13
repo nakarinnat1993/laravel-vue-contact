@@ -40,7 +40,7 @@ export default {
     },
     methods: {
         submitForm(){
-            console.log(this.form);
+            // console.log(this.form);
             axios.post('/api/contacts', this.form)
                 .then(response =>{
 
