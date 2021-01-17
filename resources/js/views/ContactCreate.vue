@@ -43,7 +43,8 @@ export default {
             // console.log(this.form);
             axios.post('/api/contacts', this.form)
                 .then(response =>{
-
+                    console.log(response.data);
+                    this.$router.push('/contacts/'+response.data.id)
                 }).catch(errors=>{
                     this.errors = errors.response.data.errors;
                 });

@@ -60,7 +60,8 @@ class ContactController extends Controller
      */
     public function show($id)
     {
-        //
+        $contact = Contact::find($id);
+        return response()->json($contact);
     }
 
     /**

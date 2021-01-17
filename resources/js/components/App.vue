@@ -22,9 +22,7 @@
                     <div>
                         Contacts
                     </div>
-                    <div class="rounded-full text-white bg-blue-400 w-10 h-10 flex justify-center items-center border border-gray-400">
-                        NK
-                    </div>
+                    <UserCirle :name="user.name"/>
                 </div>
                 <div class="flex flex-col overflow-y-hidden flex-1">
                     <router-view class="p-6 overflow-x-hidden"></router-view>
@@ -35,18 +33,27 @@
 </template>
 
 <script>
+import UserCirle from "./UserCircle";
+
 export default {
     name:"App",
     props:[
         'user'
     ],
-    mounted() {
+    components:{
+        UserCirle
+    },
+    created() {
         window.axios.interceptors.request.use(
             (config) => {
-                config.data = {
-                    ...config.data,
-                    api_token:this.user.api_token
-                };
+                if(config.method === 'get'){
+                    config.url = config.url + '?api_token=' + this.user.api_token;
+                }else{
+                    config.data = {
+                        ...config.data,
+                        api_token:this.user.api_token
+                    };
+                }
                 return config;
             }
         )
