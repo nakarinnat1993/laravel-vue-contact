@@ -60,7 +60,7 @@ class ContactController extends Controller
      */
     public function show($id)
     {
-        $contact = Contact::find($id);
+        $contact = Contact::findOrfail($id);
         return response()->json($contact);
     }
 
@@ -95,6 +95,8 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contact = Contact::find($id);
+
+        $contact->delete();
     }
 }
