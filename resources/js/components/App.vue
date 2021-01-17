@@ -9,7 +9,7 @@
                     <router-link to="/contacts/create" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-plus" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Add New</p> </router-link>
 
                     <p class="pt-10 text-gray-500 text-xs uppercase font-bold">General</p>
-                    <router-link to="/" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-list-alt" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Contacts</p> </router-link>
+                    <router-link to="/contacts" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-list-alt" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Contacts</p> </router-link>
                     <router-link to="/" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-birthday-cake" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Birthdays</p> </router-link>
 
                     <p class="pt-10 text-gray-500 text-xs uppercase font-bold">Settings</p>
