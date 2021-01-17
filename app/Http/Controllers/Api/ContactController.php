@@ -37,7 +37,7 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required|unique:contacts|max:255',
+            'name' => 'required',
             'email' => 'required|email',
             'birthday' => 'required',
             'company' => 'required',
@@ -84,7 +84,19 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'birthday' => 'required',
+            'company' => 'required',
+        ]);
+        $contact = Contact::find($id);
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->birthday = $request->birthday;
+        $contact->company = $request->company;
+        $contact->save();
+        return response()->json($contact);
     }
 
     /**

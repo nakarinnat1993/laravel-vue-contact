@@ -27,7 +27,8 @@ export default {
         'name',
         'label',
         'placeholder',
-        'errors'
+        'errors',
+        'data'
     ],
     data() {
         return {
@@ -60,6 +61,12 @@ export default {
             }
         }
     },
+    watch:{
+        data(val) {
+            this.value = val;
+
+        },
+    }
 
 };
 </script>

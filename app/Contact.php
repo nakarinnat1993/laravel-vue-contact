@@ -14,4 +14,7 @@ class Contact extends Model
     public function setBirthdayAttribute($birthday){
         $this->attributes['birthday'] = Carbon::parse($birthday);
     }
+    public function getBirthdayAttribute($birthday){
+        return Carbon::parse($birthday)->format('m/d/Y');
+    }
 }
