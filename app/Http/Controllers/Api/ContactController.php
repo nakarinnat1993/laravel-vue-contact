@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Contact;
+use Illuminate\Support\Carbon;
+
+
 
 class ContactController extends Controller
 {
@@ -111,5 +114,11 @@ class ContactController extends Controller
         $contact = Contact::find($id);
 
         $contact->delete();
+    }
+    public function birthdays(){
+        // echo Carbon::now()->month;
+        $contacts = Contact::whereMonth('birthday',Carbon::now()->month)->get();
+
+        return response()->json($contacts);
     }
 }

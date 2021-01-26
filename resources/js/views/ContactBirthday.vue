@@ -1,6 +1,6 @@
 <template>
-    <div class="contact-index">
-        <ContactList endpoint="/api/contacts" />
+    <div class="contact-birthday">
+        <ContactList endpoint="/api/birthdays" />
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 import ContactList from "../components/ContactList";
 
 export default {
-    name: "ContactIndex",
+    name: "ContactBirthday",
     components:{
         ContactList
     }
