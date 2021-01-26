@@ -55116,7 +55116,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue");
-/* harmony import */ var _views_ContactIndex_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/ContactIndex.vue */ "./resources/js/views/ContactIndex.vue");
+/* harmony import */ var _views_ContactIndex_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/ContactIndex.vue */ "./resources/js/views/ContactIndex.vue");
 /* harmony import */ var _views_ContactCreate_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/ContactCreate.vue */ "./resources/js/views/ContactCreate.vue");
 /* harmony import */ var _views_ContactShow_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/ContactShow.vue */ "./resources/js/views/ContactShow.vue");
 /* harmony import */ var _views_ContactEdit_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/ContactEdit.vue */ "./resources/js/views/ContactEdit.vue");
@@ -55134,7 +55134,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
     path: '/contacts',
-    component: _views_ContactIndex_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: _views_ContactIndex_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   }, {
     path: '/contacts/create',
     component: _views_ContactCreate_vue__WEBPACK_IMPORTED_MODULE_4__["default"]

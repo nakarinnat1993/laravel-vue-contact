@@ -40,7 +40,7 @@ class ContactController extends Controller
         $data = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'birthday' => 'required',
+            'birthday' => 'required|date_format:m/d/Y',
             'company' => 'required',
         ]);
         $contact = Contact::create([
@@ -88,7 +88,7 @@ class ContactController extends Controller
         $data = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'birthday' => 'required',
+            'birthday' => 'required|date_format:m/d/Y',
             'company' => 'required',
         ]);
         $contact = Contact::find($id);
