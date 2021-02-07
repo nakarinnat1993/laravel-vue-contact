@@ -13,7 +13,7 @@
                     <router-link to="/birthdays" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-birthday-cake" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Birthdays</p> </router-link>
 
                     <p class="pt-10 text-gray-500 text-xs uppercase font-bold">Settings</p>
-                    <router-link to="/" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-unlock" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Logout</p> </router-link>
+                    <router-link to="/logout" class="flex items-center p-2 text-sm hover:text-blue-400"><i class="fa fa-unlock" aria-hidden="true"></i> <p class="tracking-wide pl-3 font-bold">Logout</p> </router-link>
 
                 </nav>
             </div>

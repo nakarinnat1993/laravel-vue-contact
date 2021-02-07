@@ -6,6 +6,7 @@ import ContactCreate from './views/ContactCreate.vue';
 import ContactShow from './views/ContactShow.vue';
 import ContactEdit from './views/ContactEdit.vue';
 import ContactBirthday from './views/ContactBirthday.vue';
+import Logout from './actions/Logout.vue';
 
 Vue.use(VueRouter);
 
@@ -40,6 +41,11 @@ export default new VueRouter({
             path:'/birthdays',
             component: ContactBirthday,
             meta: { title:'ContactBirthday' }
+        },
+        {
+            path:'/logout',
+            component: Logout,
+            meta: { title:'Logout' }
         },
     ],
     mode: 'history'
