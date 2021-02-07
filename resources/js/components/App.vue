@@ -20,7 +20,7 @@
             <div class="flex flex-col flex-1 h-screen overflow-y-hidden">
                 <div class="h-16 px-5 border-b border-gray-400 flex items-center justify-between">
                     <div>
-                        Contacts
+                        {{ title }}
                     </div>
                     <div class="flex items-center">
                         <SearchBar/>
@@ -48,7 +48,13 @@ export default {
         UserCircle,
         SearchBar
     },
+    data() {
+        return {
+            title:''
+        }
+    },
     created() {
+        this.title = this.$route.meta.title;
         window.axios.interceptors.request.use(
             (config) => {
                 if(config.method === 'get'){
@@ -63,6 +69,14 @@ export default {
             }
         )
     },
+    watch:{
+        $route(to, form){
+            this.title = to.meta.title;
+        },
+        title(){
+            document.title = this.title+" | Laravel + Vue";
+        }
+    }
 }
 </script>
 

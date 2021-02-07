@@ -1962,9 +1962,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     UserCircle: _UserCircle__WEBPACK_IMPORTED_MODULE_0__["default"],
     SearchBar: _SearchBar__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
+  data: function data() {
+    return {
+      title: ''
+    };
+  },
   created: function created() {
     var _this = this;
 
+    this.title = this.$route.meta.title;
     window.axios.interceptors.request.use(function (config) {
       if (config.method === 'get') {
         config.url = config.url + '?api_token=' + _this.user.api_token;
@@ -1976,6 +1982,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       return config;
     });
+  },
+  watch: {
+    $route: function $route(to, form) {
+      this.title = to.meta.title;
+    },
+    title: function title() {
+      document.title = this.title + " | Laravel + Vue";
+    }
   }
 });
 
@@ -38924,7 +38938,11 @@ var render = function() {
             },
             [
               _c("div", [
-                _vm._v("\n                    Contacts\n                ")
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.title) +
+                    "\n                "
+                )
               ]),
               _vm._v(" "),
               _c(
@@ -55604,22 +55622,40 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
     path: '/',
-    component: _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    component: _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    meta: {
+      title: 'ExampleComponent'
+    }
   }, {
     path: '/contacts',
-    component: _views_ContactIndex_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _views_ContactIndex_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    meta: {
+      title: 'ContactIndex'
+    }
   }, {
     path: '/contacts/create',
-    component: _views_ContactCreate_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _views_ContactCreate_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    meta: {
+      title: 'ContactCreate'
+    }
   }, {
     path: '/contacts/:id',
-    component: _views_ContactShow_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _views_ContactShow_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    meta: {
+      title: 'ContactShow'
+    }
   }, {
     path: '/contacts/:id/edit',
-    component: _views_ContactEdit_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: _views_ContactEdit_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    meta: {
+      title: 'ContactEdit'
+    }
   }, {
     path: '/birthdays',
-    component: _views_ContactBirthday_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: _views_ContactBirthday_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    meta: {
+      title: 'ContactBirthday'
+    }
   }],
   mode: 'history'
 }));
